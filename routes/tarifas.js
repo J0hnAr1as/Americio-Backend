@@ -1,11 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const tariController = require("../controllers/tarifasController");
 
-// POST → guardar datos de tarifas
-router.post("/", tarifasController.createTarifa);
+// Importa el controller con el nombre correcto
+const tarifasController = require("../controllers/tarifasController");
+const validateTarifas = require("../middlewares/validatetarifas");
 
-// GET → obtener últimos registros
+// POST → guardar tarifa
+router.post("/", validateTarifas, tarifasController.createTarifa);
+
+// GET → listar tarifas
 router.get("/", tarifasController.getTarifas);
 
 module.exports = router;
+
