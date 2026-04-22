@@ -12,4 +12,3 @@ router.post("/", validateTarifas, tarifasController.createTarifa);
 router.get("/", tarifasController.getTarifas);
 
 module.exports = router;
-
