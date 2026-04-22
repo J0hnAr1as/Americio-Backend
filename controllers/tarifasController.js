@@ -1,7 +1,7 @@
 const db = require("../firebase");
 
-// Crear registro de oro
-exports.createOro = async (req, res) => {
+// Crear registro de tarifa
+exports.createTarifa = async (req, res) => {
   try {
     const {
       date,
@@ -28,7 +28,7 @@ exports.createOro = async (req, res) => {
       return res.status(400).json({ error: "Datos incompletos" });
     }
 
-    const ref = await db.collection("oro").add({
+    const ref = await db.collection("tarifas").add({
       date,
       timestamp,
       metal,
@@ -51,16 +51,16 @@ exports.createOro = async (req, res) => {
 
     return res.status(201).json({ ok: true, id: ref.id });
   } catch (error) {
-    console.error("Error creando oro:", error);
+    console.error("Error creando tarifa:", error);
     res.status(500).json({ error: "Error en servidor" });
   }
 };
 
-// Obtener registros de oro
-exports.getOro = async (req, res) => {
+// Obtener registros de tarifas
+exports.getTarifas = async (req, res) => {
   try {
     const snapshot = await db
-      .collection("oro")
+      .collection("tarifas")
       .orderBy("createdAt", "desc")
       .limit(50)
       .get();
@@ -72,7 +72,7 @@ exports.getOro = async (req, res) => {
 
     return res.status(200).json(data);
   } catch (error) {
-    console.error("Error obteniendo oro:", error);
+    console.error("Error obteniendo tarifas:", error);
     res.status(500).json({ error: "Error en servidor" });
   }
 };

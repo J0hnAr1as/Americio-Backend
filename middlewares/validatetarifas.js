@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const oroSchema = Joi.object({
+const tarifaSchema = Joi.object({
   date: Joi.string().required(),
   timestamp: Joi.string().optional(),
   metal: Joi.string().optional(),
@@ -21,7 +21,7 @@ const oroSchema = Joi.object({
 });
 
 module.exports = (req, res, next) => {
-  const { error } = oroSchema.validate(req.body);
+  const { error } = tarifaSchema.validate(req.body);
   if (error) {
     return res.status(400).json({ error: error.details[0].message });
   }

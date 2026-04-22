@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const oroController = require("../controllers/oroController");
+const tariController = require("../controllers/tarifasController");
 
-// POST → guardar datos de oro
-router.post("/", oroController.createOro);
+// POST → guardar datos de tarifas
+router.post("/", tarifasController.createTarifa);
 
 // GET → obtener últimos registros
-router.get("/", oroController.getOro);
+router.get("/", tarifasController.getTarifas);
 
 module.exports = router;
