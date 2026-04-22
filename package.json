@@ -144,6 +144,7 @@
     "semver": "^7.7.4",
     "send": "^1.2.1",
     "serve-static": "^2.2.1",
+    "serverless-http": "^4.0.0",
     "setprototypeof": "^1.2.0",
     "side-channel": "^1.1.0",
     "side-channel-list": "^1.0.0",
@@ -189,4 +190,3 @@
   "license": "ISC",
   "type": "commonjs"
 }
-
