@@ -1,6 +1,5 @@
-const db = require("../firebase");
+const db = require("../config/firebase");
 
-// Crear registro de tarifa
 exports.createTarifa = async (req, res) => {
   try {
     const {
