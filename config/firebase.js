@@ -1,4 +1,5 @@
 const admin = require("firebase-admin");
+require("dotenv").config();
 
 // Parsear el JSON de la variable de entorno
 const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);

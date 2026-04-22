@@ -20,6 +20,7 @@
   "homepage": "https://github.com/J0hnAr1as/Americio-Backend#readme",
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "firebase-admin": "^13.8.0",
     "joi": "^18.1.2",
