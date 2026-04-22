@@ -89,6 +89,7 @@
     "is-fullwidth-code-point": "^3.0.0",
     "is-promise": "^4.0.0",
     "is-stream": "^2.0.1",
+    "joi": "^18.1.2",
     "jose": "^4.15.9",
     "json-bigint": "^1.0.0",
     "jsonwebtoken": "^9.0.3",
